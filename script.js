@@ -3,23 +3,27 @@ const rootNode = document.getElementById("root");
 const root = ReactDOM.createRoot(rootNode)
 
 function App(){
-    //return React.createElement("h1", null, "Hello React")
-    return React.createElement("div", null,
-        React.createElement("h1", null, "Hello React"),
-        React.createElement("p", null, "Novi modul React"),
-        React.createElement("ul", null,
-            React.createElement("li", null, "Subtitle 1"),
-            React.createElement("li", null, "Subtitle 2"),
-            React.createElement("li", null, "Subtitle 3"),
-            )
+    return (
+    <>
+        <h1>Pozdrav Algebra iz JSX</h1>   
+        <Paragraf />
+    </>
     )
 }
 
-const virtualDOM = App()
-//const virtualDOM = React.createElement("h1", null, "Hello React")
-console.log(virtualDOM)
+function Paragraf(){
+    return (
+        <>
+            <p>Nekakav Paragraf</p>   
+        </>
+        )
+}
 
-root.render(React.createElement(App))
+//const virtualDOM = App()
+//const virtualDOM = React.createElement("h1", null, "Hello React")
+//console.log(virtualDOM)
+
+root.render(App())
 
 /*const VD = {
     type: "h1",
